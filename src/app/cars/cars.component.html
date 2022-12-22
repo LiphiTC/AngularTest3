@@ -1,0 +1,10 @@
+<h2>Список автомобилей</h2>
+
+<mat-card *ngFor="let car of cars" >
+  <mat-card-title>{{ car.brandName }} {{ car.modelName }}</mat-card-title>
+  <mat-card-content>
+    Price: {{ car.priceInRub }} RUB
+  </mat-card-content>
+</mat-card>
+
+

@@ -1,0 +1,13 @@
+<h2>Add Car</h2>
+
+<form (ngSubmit)="addCar()">
+  <mat-form-field calss="block">
+    <input matInput placeholder="Brand name" [(ngModel)]="car.brandName" name="brandName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Model name" [(ngModel)]="car.modelName" name="modelName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Price in RUB" [(ngModel)]="car.priceInRub" name="priceInRub" type="number">
+  </mat-form-field>
+  <button mat-raised-button color="primary">Add car</button></form>

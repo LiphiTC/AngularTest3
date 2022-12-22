@@ -1,0 +1,16 @@
+<div *ngIf="car">
+    <h2>{{ car.brandName }} {{ car.modelName }}</h2>
+    <div>
+        <label>ID: </label>{{ car.id }}
+    </div>
+    <div>
+        <label>Brand Name: </label>{{ car.brandName }}
+    </div>
+    <div>
+        <label>Model Name: </label>{{ car.modelName }}
+    </div>
+    <div>
+        <label>Price In Rub: </label>{{ car.priceInRub }}
+    </div>
+    <button (click)="goBack()">go back</button>
+</div>
