@@ -3,5 +3,5 @@ export class Car {
     brandName: string;
     modelName: string;
     priceInRub: number;
-    photoUrl: string;
+    photoUrl?: string;
 }

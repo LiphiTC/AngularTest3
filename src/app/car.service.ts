@@ -8,9 +8,9 @@ import { Car } from './car';
 })
 export class CarService {
   private cars: Car[] = [
-    { id: 1, brandName: 'Ford', modelName: 'Focus', priceInRub: 600000 },
-    { id: 2, brandName: 'Toyota', modelName: 'Corolla', priceInRub: 700000 },
-    { id: 3, brandName: 'Mazda', modelName: '3', priceInRub: 800000 }
+    { id: 1, brandName: 'Ford', modelName: 'Focus', priceInRub: 600000, photoUrl: "./assets/ford_focus.webp" },
+    { id: 2, brandName: 'Toyota', modelName: 'Corolla', priceInRub: 700000, photoUrl: "./assets/toyota.webp" },
+    { id: 3, brandName: 'Mazda', modelName: '3', priceInRub: 800000, photoUrl: "./assets/mazda_3.webp"  }
   ];
 
   getCars(): Observable<Car[]> {

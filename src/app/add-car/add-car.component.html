@@ -1,8 +1,11 @@
 <h2>Add Car</h2>
 
-<form (ngSubmit)="addCar()">
+<form [formGroup]="registerForm" (ngSubmit)="addCar()">
   <mat-form-field calss="block">
     <input matInput placeholder="Brand name" [(ngModel)]="car.brandName" name="brandName">
+    <mat-error *ngIf="validateControl('email') && hasError('brandName', 'required')">
+      Brand name is <strong>required</strong>
+    </mat-error>
   </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="Model name" [(ngModel)]="car.modelName" name="modelName">

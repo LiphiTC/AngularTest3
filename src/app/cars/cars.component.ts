@@ -20,4 +20,5 @@ export class CarsComponent implements OnInit {
     this.carService.getCars()
       .subscribe(cars => this.cars = cars);
   }
+  getPhoto = (car: Car) => car.photoUrl ?? "./assets/no-photo-male.webp";
 }

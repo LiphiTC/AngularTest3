@@ -1,10 +1,17 @@
 <h2>Список автомобилей</h2>
-
-<mat-card *ngFor="let car of cars" >
-  <mat-card-title>{{ car.brandName }} {{ car.modelName }}</mat-card-title>
+<mat-card *ngFor="let car of cars" class="col-3 mx-3 mt-4" style="display: inline-block;">
+  <mat-card-header>
+    <mat-card-title>{{ car.brandName }} {{ car.modelName }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{getPhoto(car)}}" style="height: 100px;">
   <mat-card-content>
     Price: {{ car.priceInRub }} RUB
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
 </mat-card>
+
 
 
