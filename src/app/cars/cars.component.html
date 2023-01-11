@@ -8,8 +8,7 @@
     Price: {{ car.priceInRub }} RUB
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+    <button [routerLink]="['/car', car.id]" mat-button>View more info</button>
   </mat-card-actions>
 </mat-card>
 

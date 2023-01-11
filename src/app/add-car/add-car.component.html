@@ -1,16 +1,16 @@
 <h2>Add Car</h2>
 
-<form [formGroup]="registerForm" (ngSubmit)="addCar()">
+<form [formGroup]="registerForm" novalidate (ngSubmit)="addCar()">
   <mat-form-field calss="block">
-    <input matInput placeholder="Brand name" [(ngModel)]="car.brandName" name="brandName">
-    <mat-error *ngIf="validateControl('email') && hasError('brandName', 'required')">
+    <input matInput placeholder="Brand name" [(ngModel)]="car.brandName" formControlName="brandName">
+    <mat-error *ngIf="validateControl('brandName') && hasError('brandName', 'required')">
       Brand name is <strong>required</strong>
     </mat-error>
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Model name" [(ngModel)]="car.modelName" name="modelName">
+    <input matInput placeholder="Model name" [(ngModel)]="car.modelName" formControlName="modelName">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Price in RUB" [(ngModel)]="car.priceInRub" name="priceInRub" type="number">
+    <input matInput placeholder="Price in RUB" [(ngModel)]="car.priceInRub" formControlName="priceInRub" type="number">
   </mat-form-field>
   <button mat-raised-button color="primary">Add car</button></form>

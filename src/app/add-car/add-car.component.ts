@@ -27,7 +27,6 @@ export class AddCarComponent implements OnInit {
       brandName: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]),
       modelName: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]),
       priceInRub: new FormControl('', [Validators.required, Validators.minLength(10000), Validators.maxLength(9999999)]),
-
     });
 
 
@@ -36,10 +35,12 @@ export class AddCarComponent implements OnInit {
     return this.registerForm.get(controlName)?.invalid && this.registerForm.get(controlName)?.touched
   }
   public hasError = (controlName: string, errorName: string) => {
-    console.log(this.registerForm);
     return this.registerForm.get(controlName)?.hasError(errorName)
   }
-  addCar(): void {
+  addCar(): void {  
+    if(!this.car.brandName || !this.car.modelName || !this.car.priceInRub )
+      return;
+    
     this.carService.addCar(this.car);
     this.router.navigate(['/cars']);
   }
